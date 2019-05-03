@@ -15,7 +15,7 @@ class App extends Component {
       selectedGifID: "3og0IGFLUEUWKUCO0E"
     }
 
-    this.search("homer thinking");
+    this.search("a");
    }
 
    search = (query) => {
@@ -25,6 +25,7 @@ class App extends Component {
       rating: 'g',
       limit: 10
       }, (error, result) => {
+        console.log(result.data)
         this.setState({
           gifs: result.data
       })
