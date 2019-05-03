@@ -5,8 +5,7 @@ import SearchBar from "./search_bar.jsx";
 import Gif from "./gif.jsx";
 import GifList from "./gif_list.jsx"
 
-const GIPHY_API_KEY = 'ieOllzYb0kfuu2PYwgcN9Yn6mgo0vVMx';
-
+const GIPHY_API_KEY = '1KMPHCBIOe3hOjJwCJQX49sRc6cM0oIm';
 
 class App extends Component {
    constructor(props) {
@@ -22,15 +21,15 @@ class App extends Component {
 
    search = (query) => {
     // Todo : API Call
-    giphy({ apiKey: GIPHY_API_KEY, https: true }).search({
-      q: query,
-      rating: 'g',
-      limit: 10
-      }, (error, result) => {
-        console.log(result.data)
+    giphy({ apiKey: GIPHY_API_KEY, https: true })
+      .search({
+        q: query,
+        rating: 'g',
+        limit: 10
+      }, (err, result) => {
         this.setState({
           gifs: result.data
-      })
+        })
     })
    }
 
