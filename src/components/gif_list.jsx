@@ -14,7 +14,7 @@ class GifList extends Component {
     return (
       <div className="gif-list">
        {this.renderList()}
-    </div>
+      </div>
     )
   }
 }

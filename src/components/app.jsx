@@ -37,11 +37,12 @@ class App extends Component {
           <div className="left-scene">
             <SearchBar searchFunction={this.search}/>
             <div className="selected-gif">
-              <Gif id={this.state.selectedGifId}/>
+              <Gif id={this.state.selectedGifID} />
             </div>
           </div>
-          <div className="right-scene"></div>
+          <div className="right-scene">
             <GifList gifs={this.state.gifs} />
+          </div>
         </div>
     );
   }
